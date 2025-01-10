@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle 
+import sklearn
 
 
 cars_df = pd.read_csv("cars24-car-price.csv")
@@ -33,9 +34,9 @@ seller_type =  col3.selectbox("Select the seller type", ["Dealer", "Individual",
 
 km_driven = col3.slider("Set the km driven", 500, 50000, step = 100)
 
-mileage = col4.slider("Set the mileage", 10, 5000, step = 10)
+mileage = col4.slider("Set the mileage", 1, 50, step = 1)
 
-max_power = col4.slider("Set the max power", 10, 10000, step = 10)
+max_power = col4.slider("Set the max power", 1, 100, step = 1)
 
 
 
